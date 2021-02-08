@@ -33,6 +33,27 @@ button:focus{
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+
+@media (min-width: 1200px){
+    .resultatPizza{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:768px){
+    .resultatPizza{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:500px){
+
+    .resultatPizza{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
 .card{
     margin: 2rem 0.5rem 0rem 0.5rem ;
     text-align: center;
