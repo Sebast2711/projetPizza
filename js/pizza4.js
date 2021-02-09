@@ -1,11 +1,8 @@
-
-function afficher6pizzas (){
-
+function afficher4pizzas (){
 
     let pizzaDOM =  document.querySelector ('.resultatPizza');
-
  
-    for (let i = 0; i < 8; i++){
+    for (let i = 0; i < 4; i++){
         let divCard = document.createElement ('div');
         divCard.classList.add('card');
 
@@ -30,4 +27,4 @@ function afficher6pizzas (){
 }
 
 
-afficher6pizzas();
+afficher4pizzas();

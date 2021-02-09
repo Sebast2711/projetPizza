@@ -1,3 +1,7 @@
+/**********/
+/* HEADER */
+/**********/
+
 header {
     display: flex;
     padding: 1em;
@@ -49,6 +53,19 @@ header ul li a {
     font-size: 2.5em;
 }
 
+header i {
+    font-size:5em;
+    position: absolute;
+    right: 25px;
+    top: 50px;
+    cursor: pointer;
+}
+
+/**********/
+/* FOOTER */
+/**********/
+
+
 footer {
     padding: 1.5em;
     margin: 0px;    
@@ -78,17 +95,30 @@ footer ul li a {
     color: black;
 }
 
-header i {
-    font-size:5em;
-    position: absolute;
-    right: 25px;
-    top: 50px;
-    cursor: pointer;
-}
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
 
-.show-menu{
-    display: flex;
-    flex-direction: column;
+@media (max-width:768px){
+    .show-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    header ul li {
+        padding: 3em;
+    }
+
+    footer ul{
+        width: 100%;
+        justify-content: center;
+    }
+    footer p {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
 }
 
 @media (min-width:769px){

@@ -40,7 +40,7 @@ article {
     width: 98%;
     margin: 0px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 @media (min-width: 1200px){
@@ -50,11 +50,12 @@ article {
 }
 
 @media (max-width:768px){
-    .resultatPizza{
-        grid-template-columns: 1fr 1fr;
-    }    
+
     header ul {
         display: none;
+    }
+    header nav {
+        flex-wrap: wrap;
     }
 }
 
