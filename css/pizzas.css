@@ -42,3 +42,25 @@ article {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+@media (min-width: 1200px){
+    .resultatPizza{
+        grid-template-columns:1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:768px){
+    .resultatPizza{
+        grid-template-columns: 1fr 1fr;
+    }    
+    header ul {
+        display: none;
+    }
+}
+
+@media (max-width:500px){
+    .resultatPizza{
+        grid-template-columns: 1fr;
+    }
+}
+

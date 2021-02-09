@@ -5,7 +5,7 @@ function afficher6pizzas (){
     let pizzaDOM =  document.querySelector ('.resultatPizza');
 
  
-    for (let i = 0; i < 6; i++){
+    for (let i = 0; i < 8; i++){
         let divCard = document.createElement ('div');
         divCard.classList.add('card');
 
