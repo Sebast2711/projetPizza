@@ -4,7 +4,7 @@ class Pizza {
 	constructor(nomPizza, prixPizza, ingredientPizza, vegetarienne = false) {
 		this.nom = nomPizza;
 		this.prix = prixPizza;
-		this.ingredients = ingredientPizza;
+		this.ingredients = ingredientPizza;		
         this.imageUrl = "../images/pizzasImages/pizza-" + nomPizza +".jpg";
 		this.vegetarienne = vegetarienne;
 	}

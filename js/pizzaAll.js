@@ -1,11 +1,10 @@
 function afficherAllPizzas (){
 
-console.log ('tabpIIAIOOGOARGORGGRORGPRG', tabPizza);
-
     let pizzaDOM =  document.querySelector('.resultatPizza');
 
 
     for (let i = 0; i < tabPizza.length; i++){
+
         let divCard = document.createElement ('div');
         divCard.classList.add('card');
         
@@ -26,7 +25,8 @@ console.log ('tabpIIAIOOGOARGORGGRORGPRG', tabPizza);
         divCard.appendChild (pizzaImages);
         divCard.appendChild(pizzaH3);
         divCard.appendChild(pizzaParagraphe);
-    }    
+    }   
+
 }
 afficherAllPizzas();
 
