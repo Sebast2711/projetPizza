@@ -3,6 +3,9 @@
     padding-top: 2rem;
 }
 
+
+/* Formulaire de filtre de pizzas */
+
 #form-select-pizzas {
     width: 70%;
     margin: 0px auto;
@@ -12,16 +15,77 @@
     font-size: 1.5em;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
 }
+
+/* Trier par le nom d'une pizza */
 
 #champs-nom {
     width: 50%;
     text-align: center;
     margin: 10px auto;
+    grid-column: 1/1 ;
+    grid-row: 1/1;
+}
+
+
+/* Prix de la pizza */
+#champs-prix {
+    grid-column: 1/1 ;
+    grid-row: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #champs-prix-1, #champs-prix-2  {
     width: 5em;
+    margin: 0px 1em;
 }
 
+
+/* Ingredients de la pizza */
+
+#champs-select-ingredients{
+    grid-column: 2/2 ;
+    grid-row: 1/1;
+    width: 50%;
+    text-align: center;
+    margin: 10px auto;
+    height: 75%;
+}
+
+select:invalid{
+    color: gray;
+}
+option{
+    color: black;
+}
+
+#champs-selected-ingredients {
+    grid-column: 2/2 ;
+    grid-row: 2/span 2;
+}
+
+/* Checkboxes */
+
+#champs-checkboxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+
+/* button */
+
+
+#button-div{
+    grid-column: 1/span 2 ;
+    grid-row: 4/4;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#submit-button{
+    width: 15%;
+}

@@ -20,11 +20,17 @@ function afficherAllPizzas (){
         let pizzaParagraphe = document.createElement('p');
         pizzaParagraphe.classList.add('card-paragraphe');
         pizzaParagraphe.innerHTML = tabPizza[i].ingredients.join(', ');
-        
+
+        let pizzaPrix = document.createElement ('p');
+        pizzaPrix.classList.add ('card-price');
+        pizzaPrix.innerHTML = tabPizza[i].prix;
+
         pizzaDOM.appendChild(divCard);
         divCard.appendChild (pizzaImages);
         divCard.appendChild(pizzaH3);
+        divCard.appendChild(pizzaPrix);
         divCard.appendChild(pizzaParagraphe);
+
     }   
 
 }

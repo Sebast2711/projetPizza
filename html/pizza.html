@@ -36,29 +36,43 @@
     <div class="container">
         <!-- Formulaire de selection des pizzas -->
 
-        <!-- <form id="form-select-pizzas">
+        <form id="form-select-pizzas">
 
             <input id = "champs-nom" type="text" placeholder="NOM">
+            <select id="champs-select-ingredients" >
+                <option value="" disabled selected hidden> Choisissez vos ingredients</option>
+                <!-- <option value="mozzarella">mozzarella</option> -->
+            </select>
 
-            <label for="champs-select-ingredients"> INGREDIENTS</label>
-            <select id="champs-select-ingredients"></select>
             <div id="champs-selected-ingredients">
-
+                <!-- affichage des ingredients selectionnés par lutilisateur -->
             </div>
 
             <div id="champs-prix">
-                <label for="">Prix</label>
                 <input id="champs-prix-1" type="number" placeholder="de">
                 <input id="champs-prix-2" type="number" placeholder="à">
             </div>
 
-            <label for="champs-vegetarienne"> Vegetarienne </label>
-            <input id="champs-vegetarienne" type="checkbox">        
-            
-            <label for="champs-disponible"> Disponible </label>
-            <input id="champs-disponible" type="checkbox">
+            <!-- checkboxes -->
+            <div id="champs-checkboxes">
+                <div>
+                    <label for="champs-vegetarienne"> Vegetarienne</label>
+                    <input id="champs-vegetarienne" type="checkbox">
+                </div>
+                <div>
+                    <label for="champs-disponible"> Disponible</label>
+                    <input id="champs-disponible" type="checkbox">
+                </div>
+            </div>
+
+            <div id="button-div">
+                <button id="submit-button" type="submit">
+                    Validez
+                </button>
+            </div>
+           
         </form>
-     -->
+    
         <div class="resultatPizza">
         </div>
     </div>
