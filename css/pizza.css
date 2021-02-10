@@ -66,10 +66,26 @@ option{
 #champs-selected-ingredients {
     grid-column: 2/2 ;
     grid-row: 2/span 2;
-    display: flex;
+
 }
+
 #champs-selected-ingredients div {
     margin: 10px;
+    padding: 5px;
+    background-color: #DFDFDF;
+    border-radius: 10px;
+    display: inline-block;
+    width: 25%;
+    
+}
+
+#champs-selected-ingredients p {
+    display : inline;
+}
+
+#champs-selected-ingredients .croix-list {
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 
@@ -82,8 +98,7 @@ option{
 }
 
 
-/* button */
-
+/* Button */
 
 #button-div{
     grid-column: 1/span 2 ;

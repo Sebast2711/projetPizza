@@ -50,45 +50,66 @@ function setIngredientsInSelectInput (){
 
 setIngredientsInSelectInput ();
 
-
-
 let inputIngredientsSelect = document.querySelector ('#champs-select-ingredients');
 let inputIngredientsSelected = document.querySelector ('#champs-selected-ingredients');
 let tabIngredients = [];
 
+
 /* Ajoute une liste d'ingredients choisis en dessous du select */
 inputIngredientsSelect.addEventListener ('change', () => {
+console.log (inputIngredientsSelect.value);
+
 
     /* Test si l'ingredient n'est pas deja dans la liste */
-    if (!tabIngredients.includes(inputIngredientsSelect.value)){
+    if ((!tabIngredients.includes(inputIngredientsSelect.value ) || tabIngredients.length == 0)){
         tabIngredients.push (inputIngredientsSelect.value);
 
         let divIngredientsSelected = document.createElement ('div');
+        divIngredientsSelected.classList.add ('div-ingredient');
         let nomIngredientSelected = document.createElement ('p');
+        nomIngredientSelected.classList.add ('nom-ingredient');
         nomIngredientSelected.innerHTML = inputIngredientsSelect.value;
 
-
-
-        /**************************************************************************/
-        /***************************** A AJOUTER **********************************/
-        /* Une croix qui supprime l'ingredient de la liste quand on clique dessus */
-        /*****************************           **********************************/
-        /***************************************************************************/
-
-
-
+        let croix = document.createElement ('p');
+        croix.classList.add ('croix-list');
+        croix.innerHTML = 'X';
 
         inputIngredientsSelected.appendChild (divIngredientsSelected);
         divIngredientsSelected.appendChild (nomIngredientSelected);
+        divIngredientsSelected.appendChild (croix);
+
+
+        /* Gestion du clic de la croix pour supprimer une selection */
+        let tabCroix = document.querySelectorAll ('.croix-list');
+
+        function clickedCroix (e){
+            let ingredientASupprimerStr = e.target.parentElement.children[0].innerText;
+            if (tabIngredients.includes(ingredientASupprimerStr)){
+                tabIngredients.splice(tabIngredients.indexOf(ingredientASupprimerStr), 1);
+                e.target.parentElement.remove();
+                console.log (tabIngredients);
+            }
+        }
+        for (i = 0; i < tabCroix.length; i++){  
+            tabCroix[i].addEventListener ('click', clickedCroix);
+        }
+
 
     }
     else {
-        /* Afficher un message qui dit que l'ingredient est deja dans la liste */
         console.log("L'ingredient est déjà dans la liste des ingrédients");
     }
 
+    /* Remise a 'Choisissez un ingredient' */
+    inputIngredientsSelect.selectedIndex = 0;
+    
 });
 
+
+
+
+
+       
 
 
 
