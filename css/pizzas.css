@@ -43,6 +43,11 @@ article {
     grid-template-columns: 1fr 1fr;
 }
 
+.warning {
+    font-size: 0.8em;
+    color: red;
+}
+
 @media (min-width: 1200px){
     .resultatPizza{
         grid-template-columns:1fr 1fr 1fr 1fr;
