@@ -61,6 +61,10 @@ header i {
     cursor: pointer;
 }
 
+.text-info {
+    color: #5bc0de;
+}
+
 /**********/
 /* FOOTER */
 /**********/
